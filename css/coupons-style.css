@@ -1,0 +1,65 @@
+/* File: coupons-style.css */
+.containerticket {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando necessário */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: left; /* Alinha os itens ao centro */
+}
+
+
+.ticket {
+    background-color: #fff;
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 305px; /* Define uma largura fixa para os tickets */
+    margin-bottom: 10px;
+}
+
+.woocommerce-cart .ticket {width: 275px;}
+
+
+.code {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative; /* Necessário para aplicar z-index */
+    z-index: 1000; /* Um número alto para garantir que esteja acima */
+
+}
+
+.desccode, .codigo, .data-expiracao {
+    margin: 10px 0;
+}
+
+.codigo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ce661c;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .ticket {
+        width: 100%; /* Em telas menores, os tickets ocuparão 100% da largura */
+    }
+
+    .code {
+        font-size: 18px;
+    }
+
+    .codigo span {
+        font-size: 16px;
+    }
+}
